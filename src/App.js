@@ -4,6 +4,8 @@ import './Styling/List.css';
 import './Styling/Input.css';
 import './Styling/Remove.css';
 import './Styling/Settings.css';
+import lightGear from './img/lightGear.png';
+import darkGear from './img/darkGear.png';
 import List from './List/List'
 import ColorList from './ColorList'
 import { v4 as uuidv4 } from 'uuid'
@@ -169,6 +171,16 @@ function App() {
     }
   }
 
+  function addButtonDown() {
+    let element = document.querySelector('.addButton')
+    element.style.setProperty('background-color', 'var(--pressed-color)')
+  }
+
+  function addButtonUp() {
+    let element = document.querySelector('.addButton')
+    element.style.setProperty('background-color', 'var(--color)')
+  }
+
   function loadColors() {
     colors.forEach(color => {
       let element = document.getElementById(color.id)
@@ -181,9 +193,9 @@ function App() {
   return (
     <div className='main'>
 
-      <button className='selectAllButton' onClick={() => {handleSelectAll(); closeSettings()}}>Select All Tasks</button>
+      <button className='selectAllButton' onClick={() => {handleSelectAll(); closeSettings()}} onTouchStart>Select All Tasks</button>
       <div className='settings' onClick={handleSettings} clicked='false'>
-        <span className='icon' >&#9881;</span>
+        <img className='image' src={darkMode[0] === 0 ?lightGear : darkGear} alt=''/>
         <div className='closeSettings' onClick={handleExitSettings}></div>
         <label className='colorLabel' onClick={handleSettings}>Theme</label>
         <div className='colorPicker' onClick={handleSettings}>
@@ -199,7 +211,7 @@ function App() {
 
       <div className='inputPanel'>
         <input className='input' onKeyDown={handleKeyDown} onKeyUp={handleKeyUp} ref={taskNameRef} type='text' />
-        <button className='addButton' onClick={()=>{handleAddTask();closeSettings()}}>Add Task</button>
+        <button className='addButton' onClick={()=>{handleAddTask();closeSettings()}} onMouseDown={addButtonDown} onTouchStart={addButtonDown} onMouseUp={addButtonUp} onTouchEnd={addButtonUp}>Add Task</button>
       </div>
 
       <div className='removePanel'>

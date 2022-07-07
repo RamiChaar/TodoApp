@@ -54,6 +54,6 @@
   border-color: var(--color)
 }
 
-.addButton:active {
+.addButton:active{
   background-color: var(--pressed-color);
 }
