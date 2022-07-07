@@ -181,7 +181,7 @@ function App() {
   return (
     <div className='main'>
 
-      <button className='selectAllButton' onClick={() => {handleSelectAll(); closeSettings()}}>Select All Tasks</button>
+      <button className='selectAllButton' onClick={() => {handleSelectAll(); closeSettings()}}>Select Every Tasks</button>
       <div className='settings' onClick={handleSettings} clicked='false'>
         <span className='icon' >&#9881;</span>
         <div className='closeSettings' onClick={handleExitSettings}></div>
@@ -192,6 +192,7 @@ function App() {
         <label className='darkModeLabel' onClick={handleSettings}>Dark Mode</label>
         <input className='darkModeCheck' type='checkbox' checked={darkMode[0]} onClick={()=>{updateDarkMode();handleSettings();}} onChange={updateDarkMode}/>
       </div>
+      
       <div className='listContainer' onPointerOver={onHover}>
         <List class='list' tasks={tasks} toggleTask={toggleTask} onHover={onHover}/>
       </div>
