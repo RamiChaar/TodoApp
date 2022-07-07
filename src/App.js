@@ -25,7 +25,6 @@ const colors = [{hue: '1' ,sat: '53', light: '60', id: uuidv4()},
                 {hue: '276',sat: '53', light: '60', id: uuidv4()}]
 
 function App() {
-
   const [tasks, setTasks] = useState([])
   const [color, setColor] = useState([])
   const [darkMode, setDarkMode] = useState([])
