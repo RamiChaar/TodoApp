@@ -8,6 +8,7 @@
   border-radius: 3px;
   right: 1%;
   cursor:pointer;
+  z-index: 1;
 }
 
 .settings:hover .icon {

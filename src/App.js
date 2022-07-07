@@ -181,7 +181,7 @@ function App() {
   return (
     <div className='main'>
 
-      <button className='selectAllButton' onClick={() => {handleSelectAll(); closeSettings()}}>Select Every Tasks</button>
+      <button className='selectAllButton' onClick={() => {handleSelectAll(); closeSettings()}}>Select All Tasks</button>
       <div className='settings' onClick={handleSettings} clicked='false'>
         <span className='icon' >&#9881;</span>
         <div className='closeSettings' onClick={handleExitSettings}></div>
