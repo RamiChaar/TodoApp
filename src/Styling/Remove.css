@@ -1,0 +1,41 @@
+.removePanel {
+    width: 280px;
+    height: 30px;
+    position: relative;
+    margin-left: 51%;
+    transform: translate(-50%);
+    margin-top: 3%;
+  }
+  
+  .clearButton { 
+    background-color: var(--color);
+    color: var(--text-color);
+    height: 30px;
+    width: 160px;
+    margin-right: 10px;
+    display: inline;
+    border: none;
+    border-radius: 3px;
+    box-shadow: var(--shadow);
+    cursor:pointer;
+  }
+  
+  .clearButton:focus { 
+    outline: none !important;
+    border-color: var(--color)
+  }
+  
+  .clearButton:active {
+    background-color: var(--pressed-color);
+  }
+  
+  .label {
+    width: 100px;
+    height: 30px;
+    display: inline;
+    border: 2px solid var(--color);
+    background-color: var(--pressed-color);;
+    color: var(--text-color);
+    border-radius: 3px;
+    padding: 3px
+  }

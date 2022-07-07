@@ -1,0 +1,110 @@
+.settings {
+  height: 35px;
+  width: 35px;
+  background-color: var(--color);
+  box-shadow: var(--shadow);
+  display: inline-block;
+  position: absolute;
+  border-radius: 3px;
+  right: 1%;
+  cursor:pointer;
+}
+
+.settings:hover .icon {
+  font-size: 2.2em;
+  margin-left: 6.9px;
+  margin-top: -4.5px;
+}
+
+.settings[clicked=true] {
+  height: 150px;
+  width: 100px;
+  padding: 10px;
+  cursor: default;
+  font-size: .75rem;
+}
+
+.icon {
+  position: absolute;
+  user-select: none;
+  height: 5px;
+  width: 5px;
+  font-size: 2em;
+  margin-left: 7.9px;
+  margin-top: -2.5px;
+}
+.settings[clicked=true] .icon{
+  display: none;
+}
+
+.closeSettings {
+  display: none;
+  position: relative;
+  height: 15px;
+  width: 10px;
+  margin-left: 120px;
+  margin-bottom:0px;
+  transform: translate(-27px, -5px);
+  cursor:pointer;
+}
+.closeSettings:after {
+  content: "\00d7";
+  font-size: 1rem;
+  user-select: none;
+}
+.settings[clicked=true] .closeSettings{
+  display: inherit;
+}
+
+.darkModeLabel{
+  display: none;
+  margin-bottom:15px;
+  user-select: none;
+}
+.darkModeCheck {
+  display: none;
+  margin-left: 20px;
+  margin-bottom: 25px;
+  transform: translate(0, 2px);
+}
+.colorLabel{
+  display: none;
+  user-select: none;
+  margin-left: 27px;
+  margin-bottom: 10px;
+}
+
+.settings[clicked=true] .darkModeLabel{
+  display: inline;
+}
+.settings[clicked=true] .darkModeCheck{
+  display: inline;
+}
+.settings[clicked=true] .colorLabel{
+  display: inherit;
+}
+
+.colorPicker {
+  margin-left: 7px;
+  margin-bottom: 17px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.colorPicker .color{
+  background-color: none;
+  --hue-1: 100;
+  --sat-1: 90%;
+  --lightness-1: 40%;
+  background-color: hsl(var(--hue-1), var(--sat-1), var(--lightness-1));
+
+  display: none;
+  height: 15px;
+  width: 15px;
+  margin: 2px;
+  border: 1px solid var(--text-color);
+}
+
+.settings[clicked=true] .color {
+  display: inherit;
+}

@@ -1,0 +1,36 @@
+:root {
+  --hue: 200;
+  --sat: 52%;
+  --lightness: 60%;
+  --chosen-color: hsl(var(--hue), var(--sat), var(--lightness));
+  --lighter-color: hsl(var(--hue), calc( var(--sat) - 10%), calc(var(--lightness) + 10%));
+  --darker-color: hsl(var(--hue), calc( var(--sat) - 10%), calc(var(--lightness) - 20%));
+
+  --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  --shadow2: -2px 0 rgb(150, 150, 150), 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  --color: hsl(0, 0%, 90%);
+  --text-color: black;
+  color: var(--text-color);
+
+  --pressed-color: var(--lighter-color);
+  background-color: var(--chosen-color);
+  font-family: Arial;
+}
+
+.selectAllButton {
+  background-color: var(--color);
+  padding: 3px;
+  width: 110px;
+  left: 1%;
+  display: inline-block;
+  border: none;
+  border-radius: 3px;
+  box-shadow: var(--shadow);
+  cursor:pointer;
+  color: var(--text-color);
+}
+
+.selectAllButton:active {
+  background-color: var(--pressed-color);
+}
